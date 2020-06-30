@@ -1,0 +1,9 @@
+---
+profile_allow_ssh_from_cerberus::cerberus_nodelist:
+  - "141.142.148.5"
+  - "141.142.236.22"
+  - "141.142.236.23"
+  - "141.142.148.24"
+profile_allow_ssh_from_cerberus::custom_cfg: {}
+profile_allow_ssh_from_cerberus::groups: []
+profile_allow_ssh_from_cerberus::users: []
