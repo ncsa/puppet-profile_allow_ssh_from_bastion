@@ -1,5 +1,8 @@
 # profile_allow_ssh_from_bastion
 
+![pdk-validate](https://github.com/ncsa/puppet-profile_allow_ssh_from_bastion/workflows/pdk-validate/badge.svg)
+![yamllint](https://github.com/ncsa/puppet-profile_allow_ssh_from_bastion/workflows/yamllint/badge.svg)
+
 NCSA Common Puppet Profiles - allow ssh login from bastion nodes
  
 ## Dependencies
