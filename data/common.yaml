@@ -1,15 +1,15 @@
 ---
 lookup_options:
-  profile_allow_ssh_from_cerberus::groups:
+  profile_allow_ssh_from_bastion::groups:
     merge: "unique"
-  profile_allow_ssh_from_cerberus::users:
+  profile_allow_ssh_from_bastion::users:
     merge: "unique"
 
-profile_allow_ssh_from_cerberus::cerberus_nodelist:
+profile_allow_ssh_from_bastion::bastion_nodelist:
   - "141.142.148.5"
   - "141.142.236.22"
   - "141.142.236.23"
   - "141.142.148.24"
-profile_allow_ssh_from_cerberus::custom_cfg: {}
-profile_allow_ssh_from_cerberus::groups: []
-profile_allow_ssh_from_cerberus::users: []
+profile_allow_ssh_from_bastion::custom_cfg: {}
+profile_allow_ssh_from_bastion::groups: []
+profile_allow_ssh_from_bastion::users: []

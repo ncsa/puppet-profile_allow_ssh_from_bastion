@@ -1,5 +1,5 @@
 {
-  "name": "ncsa-profile_allow_ssh_from_cerberus",
+  "name": "ncsa-profile_allow_ssh_from_bastion",
   "version": "0.1.0",
   "author": "aloftus",
   "summary": "",

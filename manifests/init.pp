@@ -1,9 +1,9 @@
-# @summary Allow incoming ssh from any cerberus nodes
+# @summary Allow incoming ssh from any bastion nodes
 #
 # Allow incoming ssh from any cererus nodes
 #
-# @param cerberus_nodelist
-#   List of cerberus hostnames / IPs / CIDRs
+# @param bastion_nodelist
+#   List of bastion hostnames / IPs / CIDRs
 #
 #   Note: must contain at least 1 item
 #
@@ -12,18 +12,18 @@
 #
 # @param groups
 #   One or more LDAP / UNIX groups that are allowed to login from
-#   any of the nodes in cerberus_nodelist.
+#   any of the nodes in bastion_nodelist.
 #
 # @param uses
 #   One or more LDAP / UNIX users that are allowed to login from
-#   any of the nodes in cerberus_nodelist.
+#   any of the nodes in bastion_nodelist.
 #
 #   Note: One of `groups` or `users` must be set.
 #
 # @example
-#   include profile_allow_ssh_from_cerberus
-class profile_allow_ssh_from_cerberus (
-  Array[ String, 1 ] $cerberus_nodelist,
+#   include profile_allow_ssh_from_bastion
+class profile_allow_ssh_from_bastion (
+  Array[ String, 1 ] $bastion_nodelist,
   Hash               $custom_cfg,
   Array[ String ]    $groups,
   Array[ String ]    $users,
@@ -36,8 +36,8 @@ class profile_allow_ssh_from_cerberus (
   }
   $params = $parms_local + $custom_cfg
 
-  ::sshd::allow_from{ 'sshd allow from cerberus nodes':
-    hostlist                => $cerberus_nodelist,
+  ::sshd::allow_from{ 'sshd allow from bastion nodes':
+    hostlist                => $bastion_nodelist,
     users                   => $users,
     groups                  => $groups,
     additional_match_params => $params,
