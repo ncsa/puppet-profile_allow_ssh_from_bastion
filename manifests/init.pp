@@ -14,7 +14,7 @@
 #   One or more LDAP / UNIX groups that are allowed to login from
 #   any of the nodes in bastion_nodelist.
 #
-# @param uses
+# @param users
 #   One or more LDAP / UNIX users that are allowed to login from
 #   any of the nodes in bastion_nodelist.
 #
@@ -29,17 +29,10 @@ class profile_allow_ssh_from_bastion (
   Array[ String ]    $users,
 ) {
 
-  $parms_local = {
-    'PubkeyAuthentication'   => 'yes',
-    'KerberosAuthentication' => 'yes',
-    'GSSAPIAuthentication'   => 'yes',
-  }
-  $params = $parms_local + $custom_cfg
-
   ::sshd::allow_from{ 'sshd allow from bastion nodes':
     hostlist                => $bastion_nodelist,
     users                   => $users,
     groups                  => $groups,
-    additional_match_params => $params,
+    additional_match_params => $custom_cfg,
   }
 }
