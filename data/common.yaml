@@ -12,9 +12,9 @@ profile_allow_ssh_from_bastion::bastion_nodelist:
   - "141.142.148.24"
 profile_allow_ssh_from_bastion::custom_cfg:
   GSSAPIAuthentication: "yes"
-  KerberosAuthentication: "yes"
+  KerberosAuthentication: "no"
   PasswordAuthentication: "yes"
-  PubkeyAuthentication: "yes"
+  PubkeyAuthentication: "no"
 profile_allow_ssh_from_bastion::groups:
   - "org_asd"
   - "org_irst"
