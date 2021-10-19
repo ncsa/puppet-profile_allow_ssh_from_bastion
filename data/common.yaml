@@ -1,10 +1,4 @@
 ---
-lookup_options:
-  profile_allow_ssh_from_bastion::groups:
-    merge: "unique"
-  profile_allow_ssh_from_bastion::users:
-    merge: "unique"
-
 profile_allow_ssh_from_bastion::bastion_nodelist:
   - "141.142.148.5"
   - "141.142.236.22"
