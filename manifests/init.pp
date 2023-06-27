@@ -23,13 +23,12 @@
 # @example
 #   include profile_allow_ssh_from_bastion
 class profile_allow_ssh_from_bastion (
-  Array[ String, 1 ] $bastion_nodelist,
+  Array[String, 1] $bastion_nodelist,
   Hash               $custom_cfg,
-  Array[ String ]    $groups,
-  Array[ String ]    $users,
+  Array[String]    $groups,
+  Array[String]    $users,
 ) {
-
-  ::sshd::allow_from{ 'sshd allow from bastion nodes':
+  ::sshd::allow_from { 'sshd allow from bastion nodes':
     hostlist                => $bastion_nodelist,
     users                   => $users,
     groups                  => $groups,
