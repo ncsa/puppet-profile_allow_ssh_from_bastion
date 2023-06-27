@@ -33,7 +33,7 @@ The following parameters are available in the `profile_allow_ssh_from_bastion` c
 
 ##### <a name="bastion_nodelist"></a>`bastion_nodelist`
 
-Data type: `Array[ String, 1 ]`
+Data type: `Array[String, 1]`
 
 List of bastion hostnames / IPs / CIDRs
 
@@ -47,14 +47,14 @@ Additional sshd_conf params (suitable for sshd_config match block)
 
 ##### <a name="groups"></a>`groups`
 
-Data type: `Array[ String ]`
+Data type: `Array[String]`
 
 One or more LDAP / UNIX groups that are allowed to login from
 any of the nodes in bastion_nodelist.
 
 ##### <a name="users"></a>`users`
 
-Data type: `Array[ String ]`
+Data type: `Array[String]`
 
 One or more LDAP / UNIX users that are allowed to login from
 any of the nodes in bastion_nodelist.
